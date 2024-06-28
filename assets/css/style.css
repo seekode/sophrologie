@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+	--primary: #922790;
+	--secondary: #EA63AA;
+	--text: #7B7B7B;
+	--bg: #F2F2F2;
+	--bgRgba: 242, 242, 242;
+}
+
+body {
+	height: 300rem;
+	margin: 0;
+	font-family: "Roboto", sans-serif;
+	font-weight: 100;
+	font-style: normal;
+	overflow-x: hidden;
+	background: var(--bg);
+}
+
+.primary {
+	color: var(--primary);
+}
+
+.secondary {
+	color: var(--secondary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 500;
+	color: var(--primary);
+}
+
+p {
+	font-size: 1.3rem;
+	font-weight: 300;
+	color: var(--text);
+}
+
+main {
+	overflow-x: hidden;
+}
+
+section {
+	overflow: hidden;
+	max-width: 100rem;
+}
+
+nav {
+	width: 6rem;
+	height: 6rem;
+	position: fixed;
+	z-index: 2;
+	top: -1.5rem;
+	right: -1.5rem;
+	border-radius: 10rem;
+	background: var(--secondary);
+	transition: 0.3s ease-in-out;
+}
+
+nav.open {
+	width: 20rem;
+	max-width: calc(100vw - 2rem);
+	height: calc(100% - 2rem);
+	top: 1rem;
+	right: 1rem;
+	border-radius: 2rem;
+}
+
+#menu-button {
+	width: 2rem;
+	height: 2rem;
+	padding: 0;
+	border: none;
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	z-index: 100;
+	cursor: pointer;
+	border-radius: 10rem;
+	background: transparent;
+	transition: .3s ease-in-out;
+}
+
+#menu-button.open {
+	top: 2.5rem;
+	right: 2.5rem;
+}
+
+#menu-button div,
+#menu-button div::after,
+#menu-button div::before {
+	content: '';
+	width: 100%;
+	height: .25rem;
+	position: absolute;
+	border-radius: .5rem;
+	background: var(--bg);
+	transition: 0.3s ease-in-out;
+}
+
+#menu-button div {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#menu-button.open div {
+	transform: translateY(-50%) rotate(45deg);
+}
+
+#menu-button div::before {
+	left: 0;
+	bottom: 200%;
+}
+
+#menu-button.open div::before {
+	bottom: 0;
+	transform: rotate(90deg);
+}
+
+#menu-button div::after {
+	left: 0;
+	top: 200%;
+}
+
+#menu-button.open div::after {
+	top: 0;
+	transform: rotate(90deg);
+}
+
+button {
+	padding: .8rem .9rem;
+	border: none;
+	border-radius: 1rem;
+	cursor: pointer;
+	color: var(--bg);
+	background: var(--primary);
+}
