@@ -32,8 +32,12 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: 500;
+	font-weight: bold;
 	color: var(--primary);
+}
+
+h2 {
+	font-size: 2rem;
 }
 
 p {
@@ -49,6 +53,7 @@ main {
 section {
 	overflow: hidden;
 	max-width: 100rem;
+	width: 100%;
 }
 
 nav {
@@ -140,4 +145,24 @@ button {
 	cursor: pointer;
 	color: var(--bg);
 	background: var(--primary);
+}
+
+@media (max-width: 850px) {
+	h2 {
+		font-size: 1.6rem;
+	}
+
+	p {
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 600px) {
+	h2 {
+		font-size: 1.2rem;
+	}
+
+	p {
+		font-size: .9rem;
+	}
 }
