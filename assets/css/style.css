@@ -3,13 +3,13 @@
 :root {
 	--primary: #922790;
 	--secondary: #EA63AA;
+	--success: #00C853;
 	--text: #7B7B7B;
 	--bg: #F2F2F2;
 	--bgRgba: 242, 242, 242;
 }
 
 body {
-	height: 300rem;
 	margin: 0;
 	font-family: "Roboto", sans-serif;
 	font-weight: 100;
@@ -37,11 +37,12 @@ h6 {
 }
 
 h2 {
-	font-size: 2rem;
+	font-size: 1.5rem;
 }
 
-p {
-	font-size: 1.3rem;
+p,
+ul {
+	font-size: 1rem;
 	font-weight: 300;
 	color: var(--text);
 }
@@ -51,9 +52,11 @@ main {
 }
 
 section {
+	padding: 10rem 0;
 	overflow: hidden;
 	max-width: 100rem;
 	width: 100%;
+	position: relative;
 }
 
 nav {
@@ -65,6 +68,7 @@ nav {
 	right: -1.5rem;
 	border-radius: 10rem;
 	background: var(--secondary);
+	cursor: pointer;
 	transition: 0.3s ease-in-out;
 }
 
@@ -75,6 +79,7 @@ nav.open {
 	top: 1rem;
 	right: 1rem;
 	border-radius: 2rem;
+	cursor: initial;
 }
 
 #menu-button {
@@ -139,22 +144,43 @@ nav.open {
 }
 
 button {
-	padding: .8rem .9rem;
+	width: fit-content;
+	padding: .7rem 1rem;
 	border: none;
-	border-radius: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: .7rem;
 	cursor: pointer;
 	color: var(--bg);
 	background: var(--primary);
+	transition: .3s ease-in-out;
 }
 
-@media (max-width: 850px) {
-	h2 {
-		font-size: 1.6rem;
-	}
+button.text {
+	padding: .5rem 1.5rem;
+	color: var(--primary);
+	background: transparent;
+	border: 1px solid var(--primary);
+}
 
-	p {
-		font-size: 1rem;
-	}
+button ion-icon {
+	margin-left: .5rem;
+	transition: .3s ease-in-out;
+}
+
+button:hover {
+	background: var(--secondary);
+}
+
+button.text:hover {
+	color: var(--secondary);
+	background: transparent;
+	border: 1px solid var(--secondary);
+}
+
+button:hover ion-icon {
+	margin-left: 1rem;
 }
 
 @media (max-width: 600px) {
