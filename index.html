@@ -11,7 +11,15 @@
 </head>
 
 <body>
-	<nav id="nav"></nav>
+	<nav id="nav">
+		<ul>
+			<li><a href="/">Accueil</a></li>
+			<li><a href="/">Qui suis-je ?</a></li>
+			<li><a href="/">Boutique</a></li>
+			<li><a href="/">Articles</a></li>
+		</ul>
+		<button>Contact</button>
+	</nav>
 	<button id="menu-button">
 		<div></div>
 	</button>
@@ -201,22 +209,24 @@
 			</div>
 			<div class="carrousel">
 				<div>
-					<h2>Séance Enfant</h2>
-					<p>
+					<h2 class="cc-item">Séance Enfant</h2>
+					<p class="cc-item">
 						Bienvenue à notre séance de sophorlogie pour enfants! Découvrons ensemble des techniques ludiques pour se
 						détendre, mieux se concentrer et s'épanouir.
 					</p>
-					<button class="text">Passer à l'action<ion-icon class="arrow" name="arrow-forward-sharp"></ion-icon></button>
+					<button class="text cc-item">
+						Passer à l'action<ion-icon class="arrow" name="arrow-forward-sharp"></ion-icon>
+					</button>
 				</div>
-				<img src="assets/img/shop/childs.webp" alt="Carrousel">
+				<img class="cc-item" src="assets/img/shop/childs.webp" alt="Carrousel">
 			</div>
 			<div class="carrousel-control">
-				<button class="left"><ion-icon name="caret-back-outline"></ion-icon></button>
+				<button class="left cc-arrow"><ion-icon name="caret-back-outline"></ion-icon></button>
 				<button class="text cc active"><span>Enfant</span></button>
 				<button class="text cc"><span>Adolescent</span></button>
 				<button class="text cc"><span>Adulte</span></button>
 				<button class="text cc"><span>Groupe</span></button>
-				<button class="right"><ion-icon name="caret-forward-outline"></ion-icon></button>
+				<button class="right cc-arrow"><ion-icon name="caret-forward-outline"></ion-icon></button>
 			</div>
 		</section>
 	</main>
@@ -244,6 +254,7 @@
 	</footer>
 	<script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 	<script src="assets/js/scipt.js"></script>
+	<script src="assets/js/index.js"></script>
 </body>
 
 </html>

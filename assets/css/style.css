@@ -62,10 +62,15 @@ section {
 nav {
 	width: 6rem;
 	height: 6rem;
+	overflow: hidden;
 	position: fixed;
 	z-index: 2;
 	top: -1.5rem;
 	right: -1.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 	border-radius: 10rem;
 	background: var(--secondary);
 	cursor: pointer;
@@ -74,12 +79,83 @@ nav {
 
 nav.open {
 	width: 20rem;
-	max-width: calc(100vw - 2rem);
-	height: calc(100% - 2rem);
+	max-width: calc(100vw - 4rem);
+	height: calc(100% - 4rem);
+	padding: 1rem;
 	top: 1rem;
 	right: 1rem;
 	border-radius: 2rem;
 	cursor: initial;
+}
+
+nav>* {
+	opacity: 0;
+	display: none;
+	transition: .3s ease-in-out;
+}
+
+nav.open>* {
+	display: block;
+}
+
+nav.isOpen * {
+	opacity: 1;
+}
+
+nav ul {
+	width: 100%;
+	flex: 1;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+nav.open>ul {
+	display: flex;
+}
+
+nav a {
+	font-weight: 400;
+	font-size: 1.2rem;
+	position: relative;
+	color: var(--bg);
+	text-decoration: none;
+}
+
+nav a::before,
+nav a::after {
+	content: '';
+	width: 0rem;
+	height: .2rem;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: var(--primary);
+	transition: .3s ease-in-out;
+}
+
+nav a::before {
+	right: calc(100% + 1rem);
+}
+
+nav a::after {
+	left: calc(100% + 1rem);
+}
+
+nav a:hover::after,
+nav a:hover::before {
+	width: 2rem;
+}
+
+
+nav button {
+	width: 100%;
+	height: 3rem;
+	border: 1px solid var(--primary);
+	border-radius: 1rem;
 }
 
 #menu-button {

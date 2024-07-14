@@ -506,6 +506,15 @@ section.shop .carrousel {
 		25px -25px 40px #ffffff;
 }
 
+section.shop .carrousel .cc-item {
+	opacity: 1;
+	transition: all .4s ease-in-out;
+}
+
+section.shop .carrousel .cc-item.transparent {
+	opacity: 0;
+}
+
 section.shop .carrousel>div {
 	padding: 1rem;
 	display: flex;
